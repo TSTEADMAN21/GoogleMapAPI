@@ -28,6 +28,7 @@
           latitude: '<%= destination.latitude %>',
           longitude: '<%= destination.longitude %>',
           photo: '<%= destination.photo %>'
+          
         });
       <% end %>
 
@@ -39,7 +40,8 @@
           position: markerLatLng,
           map: map,
           name: item.name,
-          animation: google.maps.Animation.DROP
+          animation: google.maps.Animation.DROP,
+          draggable: true
         });
 
         var contentString = '<h2>' + item.name + '</h2> '
